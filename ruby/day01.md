@@ -1,4 +1,8 @@
-# Find
+# Ruby
+
+## Day 1
+
+### Find
 
 - [The Ruby API](https://ruby-doc.org/core-2.5.1/)
 - The free online version of [_Programming Ruby: The Pragmatic Programmer's
@@ -8,7 +12,7 @@
   expressions](http://ruby-doc.org/core-2.5.1/doc/regexp_rdoc.html)
 - Information about [Ruby's ranges](http://ruby-doc.org/core-2.5.1/Range.html)
 
-# Do
+### Do
 
 - Print the string "Hello, world."
 
