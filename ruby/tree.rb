@@ -2,11 +2,16 @@ class Tree
     attr_accessor :children, :node_name
 
     def initialize(tree,name='')
-        k, v = tree.first
-        @node_name = k
-        if name != ''
+        if name == ''
+            # root element: extract name from tree
+            k, v = tree.first
+            @node_name = k
+            tree = tree[k]
+        else
+            # all other elements: invoked with name
             @node_name = name
         end
+
         @children = []
         tree.each do |k,v|
             @children.push(Tree.new(v,k))
@@ -24,8 +29,10 @@ class Tree
 end
 
 hash = {'grandpa' => {
-        'dad' => {'child 1' => {}, 'child 2' => {}},
-        'uncle' => {'child 3' => {}, 'child 4' => {}}
+        'dad' => {'child 1' => {'grandchild 1.1' => {}, 'grandchild 1.2' => {}},
+                  'child 2' => {'grandchild 2.1' => {}, 'grandchild 2.2' => {}}},
+        'uncle' => {'child 3' => {'grandchild 3.1' => {}, 'grandchild 3.2' => {}},
+                    'child 4' => {'grandchild 4.1' => {}, 'grandchild 4.2' => {}}}
     }
 }
 hash_tree = Tree.new(hash)
