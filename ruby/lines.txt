@@ -1,0 +1,4 @@
+I wonder why this is so complicated.
+Ruby is fun, but the exercises are hard.
+The code would be much longer in C or Java.
+Ruby is even more elegant than Python in some ways.
