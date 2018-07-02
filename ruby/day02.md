@@ -131,3 +131,23 @@ puts
 puts "visiting entire tree"
 hash_tree.visit_all {|node| puts node.node_name}
 ```
+
+- Write a simple grep that will print the lines of a file having any
+  occurrences of a phrase anywhere in that line. You will need to do a simple
+  regular expression match and read lines from a file. (This is surprisingly
+  simple in Ruby.) If you want, include line numbers.
+
+```ruby
+#!/usr/bin/env ruby
+
+pattern = ARGV[0]
+filename = ARGV[1]
+
+i = 0
+File.readlines(filename).each do |line|
+    if line.index(pattern) != nil
+        puts "#{i} #{line}"
+    end
+    i += 1
+end
+```
